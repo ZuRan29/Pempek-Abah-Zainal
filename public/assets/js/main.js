@@ -1,16 +1,3 @@
-/*
-Copyright (c) 2017
-[Custom JS Script]
-Theme Name : Restaurant Landing Page
-Version    : 1.0
-Author     : UiSuMo Team
-Author URI : https://uisumo.com
-Support    : uisumo@gmail.com
-*/
-/*jslint browser: true*/
-/*global $, jQuery, alert*/
-
-
 $(document).ready(function () {
     "use strict";
     /* Page Pre Loading */
@@ -102,5 +89,5 @@ $(document).ready(function () {
             }
         });
     }
-   
+
 });

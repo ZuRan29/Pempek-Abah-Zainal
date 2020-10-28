@@ -35,9 +35,9 @@
                     	<div class="tl_menu">
                             <ul>
                                 <li><a href="#home">Home</a></li>
-                                <li><a href="#menu">About</a></li>
+                                <li><a href="#menu">Tentang</a></li>
                                 <li><a href="#features">Menu</a></li>
-                                <li><a href="#download">Download</a></li>
+                                <li><a href="#download">Pesan Sekarang</a></li>
                             </ul>
                         </div>
                     </div>
@@ -212,8 +212,12 @@
 </section>
 <!-- fourth_section_end -->
 
+<!-- sixth_section_start -->
+@yield('menu')
+<!-- sixth_section_end -->
+
 <!-- fifth_section_start -->
-<section class="rs_fifth_section">
+<section class="rs_fifth_section" id="download">
 	<div class="rs_fifth_section_overlay"></div>
 	<div class="container">
 		<div class="row">
@@ -248,10 +252,6 @@
 </section>
 <!-- fifth_section_end -->
 
-<!-- sixth_section_start -->
-@yield('menu')
-<!-- sixth_section_end -->
-
 <!-- seventh_section_start -->
 {{-- <section class="rs_seventh_section">
 	<div class="container">
@@ -274,7 +274,7 @@
 </section> --}}
 <!-- seventh_section_end -->
 <!-- footer_start -->
-<section class="rs_footer" id="download">
+<section class="rs_footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-3">
