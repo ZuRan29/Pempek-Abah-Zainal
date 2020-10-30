@@ -7,8 +7,8 @@
     <meta name="keywords" content="Online food order, Healthy breakfast food, List of Lunch recipes, Best dinner recipes, Food online delivery, Fresh online food">
     <meta name="author" content="Truelander provides the list of fresh & healthy food recipes which can pick it with one click. You can also book our food through online">
     <meta name="MobileOptimized" content="320">
-    {{-- <!--start theme style -->{{ asset('assets/') }} --}}
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}"/>
+    <!--start theme style -->
+    <link rel="shortcut icon" href="{{ asset('assets/images/syarif/logo.jpeg') }}"/>
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet" type="text/css">
