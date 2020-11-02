@@ -50,7 +50,7 @@
 						<p class="temp6_topspacer30 wow animated fadeInUp" data-wow-delay="1000ms">
                             Pempek Asli Palembang Dibuat Dengan Ikan Asli Tenggiri dan Dari Bahan Yang 100% Halal, dan Dengan Harga Yang Pasti Pas Di Kantong
 						</p>
-						<a href="#" onclick="window.open('https://api.whatsapp.com/send/?phone=6288788103990&text&app_absent=0')" class="rs_yellow_btn temp6_topspacer40 wow animated fadeInUp" data-wow-delay="1000ms">Hubungi Kami</a>
+						<a href="#" onclick="window.open('https://api.whatsapp.com/send/?phone=6287788103990')" class="rs_yellow_btn temp6_topspacer40 wow animated fadeInUp" data-wow-delay="1000ms">Hubungi Kami</a>
 					</div>
 				</div>
 			</div>
