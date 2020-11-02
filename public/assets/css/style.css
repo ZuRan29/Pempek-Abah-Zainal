@@ -211,12 +211,13 @@ body{
 .rs_top_banner{
 	float: left;
 	width: 100%;
-	background:url(../images/syarif/Percobaan.jpeg) ;
-	padding-top: 30px;
+	background:url(../images/syarif/Percobaan.jpeg) no-repeat;
+    padding-top: 30px;
 	position: relative;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 }
+
 .rs_top_banner_overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);
@@ -485,7 +486,7 @@ h1.rs_main_heading{
 	padding: 60px 0px;
 	position: relative;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .rs_third_section_overlay {
     position: absolute;
@@ -639,7 +640,7 @@ h1.rs_main_heading{
 	padding: 60px 0px;
 	position: relative;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .rs_fifth_section_overlay {
     position: absolute;

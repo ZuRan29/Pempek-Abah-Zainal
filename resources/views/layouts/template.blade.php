@@ -194,7 +194,7 @@
 				<div class="rs_flavour_section text-left wow animated fadeInRight" data-wow-duration="1500ms" data-wow-delay="400ms">
 					<h1 class="rs_main_heading">Available at Online</h1>
 					<p>It is a long established fact that a that reader will be discon by the readable content many desktop publishing packages and web page editors now use lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy.</p>
-					<a href="#" class="rs_yellow_btn">Order Now</a>
+					<a href="https://grab.onelink.me/2695613898?pid=inappsharing&c=6-CZNFG623LTAKAN&is_retargeting=true&af_dp=grab%3A%2F%2Fopen%3FscreenType%3DGRABFOOD%26sourceID%3DA4pcqCZkS4%26merchantIDs%3D6-CZNFG623LTAKAN&af_force_deeplink=true&af_web_dp=https%3A%2F%2Fwww.grab.com%2Fdownload" class="rs_yellow_btn">Tersedia Di Grab</a>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-9 col-xs-9 col-lg-pull-6 col-md-pull-6">
@@ -290,8 +290,8 @@
 			<div class="col-lg-3 col-md-3 col-lg-push-6 col-md-push-6">
 				<div class="rs_last_footer">
 					<h2>Make Reservation</h2>
-					<p>Mon - Fri: 8.00am to 10.30pm</p>
-					<p>Sat - Sun: 7.00am to 10.00pm</p>
+					<p>Senin - Jum'at. 11.00 - 23.00
+					</p>
 					<a href="#" class="rs_yellow_btn temp6_top_spacer20">Make Reservation</a>
 				</div>
 			</div>
