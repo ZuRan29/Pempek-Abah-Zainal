@@ -63,8 +63,7 @@
             <div class="contact-image">
                 <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
             </div>
-            <form method="POST" action="{{route('whatsapp.post')}}" enctype="multipart/form-data">
-               @csrf
+                @csrf
                 <h3>Drop Us a Message</h3>
                <div class="row">
                     <div class="col-md-6">
