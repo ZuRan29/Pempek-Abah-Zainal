@@ -3,15 +3,15 @@
 namespace App\Http\Controllers\Broadcast;
 
 use App\Http\Controllers\Controller;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 
-class WhatsappController extends Controller
+class ChatApiControlller extends Controller
 {
     public function index(Request $request)
     {
         $client = new Client();
-        $url = "https://api.mercury.chat/sdk/whatsapp/sendMessage?api_token=5f9f714a4638d700199964ff7IQiZc8a5&instance=L1604284746236K";
+        $url = "https://eu147.chat-api.com/instance190982/sendMessage?token=a2p7lf6hkeu4153s";
         $headers = [
             'Content-Type' => 'application/json'
         ];
@@ -23,9 +23,9 @@ class WhatsappController extends Controller
 
         $hasil = $client->request('POST', $url, [
             'headers' => $headers,
-            'body' => json_encode($data)
+            'content' => json_encode($data)
         ]);
 
-        return redirect('dashboard-blast/whatsapp');
+        return redirect('dashboard-blast/chat-api');
     }
 }
