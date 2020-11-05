@@ -22,14 +22,16 @@ Route::get('/', function () {
     return view('layouts.menu');
 });
 
-Route::get('dashboard-blast/whatsapp', function () {
-    return view('whatsapp.forms');
-});
+
 
 Route::get('dashboard-blast/broadcast', function() {
     return view('whatsapp.broadcast');
 });
 
+// Merkury Chat
+Route::get('dashboard-blast/whatsapp', function () {
+    return view('whatsapp.forms');
+});
 Route::get('dashboard-blast/all-chat', [AllController::class, 'index']);
 Route::post('dashboard-blast/whatsapp/send', [WhatsappController::class, 'index'])->name('whatsapp.post');
 

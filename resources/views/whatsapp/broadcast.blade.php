@@ -66,7 +66,6 @@
             <form method="POST" action="{{route('whatsapp.post')}}" enctype="multipart/form-data">
                @csrf
                 <h3>Drop Us a Message</h3>
-                <h4>Mercury Chat</h4>
                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
