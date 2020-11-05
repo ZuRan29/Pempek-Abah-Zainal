@@ -66,6 +66,7 @@
             <form method="POST" action="{{route('chat-api.send')}}" enctype="multipart/form-data">
                @csrf
                 <h3>Drop Us a Message</h3>
+                <br>
                 <h3>Chat-API</h3>
                <div class="row">
                     <div class="col-md-6">
