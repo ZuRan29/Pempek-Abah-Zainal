@@ -7,7 +7,7 @@
         <div class="form-head d-flex mb-3 align-items-start">
             <div class="mr-auto d-none d-lg-block">
                 <h2 class="text-black font-w600 mb-0">Dashboard</h2>
-                <p class="mb-0">Welcome to Davur Admin!</p>
+                <p class="mb-0">Welcome to Dashboard Admin!</p>
             </div>
 
             <div class="dropdown custom-dropdown">
@@ -36,9 +36,9 @@
 
                             </span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">56</span></h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">140</span></h3>
                                 <p class="mb-0">Total Menus</p>
-                                <small>4% (30 days)</small>
+                                {{-- <small>4% (30 days)</small> --}}
                             </div>
                         </div>
                     </div>
@@ -54,8 +54,8 @@
                             </span>
                             <div class="media-body">
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">126</span>k</h3>
-                                <p class="mb-0">Total Revenue</p>
-                                <small>4% (30 days)</small>
+                                <p class="mb-0">Total Pendapatan</p>
+                                {{-- <small>4% (30 days)</small> --}}
                             </div>
                         </div>
                     </div>

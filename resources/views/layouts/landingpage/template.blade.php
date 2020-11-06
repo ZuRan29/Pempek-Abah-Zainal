@@ -292,13 +292,13 @@
 					<h2>Make Reservation</h2>
 					<p>Senin - Jum'at. 11.00 - 23.00
 					</p>
-					<a href="#" class="rs_yellow_btn temp6_top_spacer20">Make Reservation</a>
+					<a href="#" class="rs_yellow_btn temp6_top_spacer20">Buat Pesanan</a>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-lg-pull-3 col-md-pull-3">
 				<div class="rs_footer_center">
 					<p>It is a long established fact that a that reader will be discon by the read able content many desktop publishing packages and web page editors now use lorem Ipsum infancy.</p>
-					<p class="rs_copyright">2016 &copy; Copyrights - <a href="#">Truelander</a> - All Rights Reserved.</p>
+					<p class="rs_copyright">2016 &copy; Copyrights - <a href="#">Zulkifli Raihan</a> - All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
