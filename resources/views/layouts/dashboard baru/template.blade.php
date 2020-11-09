@@ -10,32 +10,32 @@
     <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Dashboard Ecommerce - Frest - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ asset('dashboard/app-assets/images/ico/apple-icon-120.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('dashboard/app-assets/images/ico/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/vendors/css/charts/apexcharts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/vendors/css/extensions/swiper.min.css') }}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/themes/semi-dark-layout.css') }}">
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-ecommerce.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/css/pages/dashboard-ecommerce.css') }}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/assets/css/style.css') }}">
     <!-- END: Custom CSS-->
 
 </head>
@@ -92,7 +92,7 @@
                                 <li class="scrollable-container media-list"><a class="d-flex justify-content-between" href="javascript:void(0)">
                                         <div class="media d-flex align-items-center">
                                             <div class="media-left pr-0">
-                                                <div class="avatar mr-1 m-0"><img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="39" width="39"></div>
+                                                <div class="avatar mr-1 m-0"><img src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="39" width="39"></div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading"><span class="text-bold-500">Congratulate Socrates Itumay</span> for work anniversaries</h6><small class="notification-text">Mar 15 12:32pm</small>
@@ -102,7 +102,7 @@
                                     <div class="d-flex justify-content-between read-notification cursor-pointer">
                                         <div class="media d-flex align-items-center">
                                             <div class="media-left pr-0">
-                                                <div class="avatar mr-1 m-0"><img src="../../../app-assets/images/portrait/small/avatar-s-16.jpg" alt="avatar" height="39" width="39"></div>
+                                                <div class="avatar mr-1 m-0"><img src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-16.jpg') }}" alt="avatar" height="39" width="39"></div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading"><span class="text-bold-500">New Message</span> received</h6><small class="notification-text">You have 18 unread messages</small>
@@ -111,7 +111,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between cursor-pointer">
                                         <div class="media d-flex align-items-center py-0">
-                                            <div class="media-left pr-0"><img class="mr-1" src="../../../app-assets/images/icon/sketch-mac-icon.png" alt="avatar" height="39" width="39"></div>
+                                            <div class="media-left pr-0"><img class="mr-1" src="{{ asset('dashboard/app-assets/images/icon/sketch-mac-icon.png') }}" alt="avatar" height="39" width="39"></div>
                                             <div class="media-body">
                                                 <h6 class="media-heading"><span class="text-bold-500">Updates Available</span></h6><small class="notification-text">Sketch 50.2 is currently newly added</small>
                                             </div>
@@ -165,7 +165,7 @@
                                     <div class="d-flex justify-content-between read-notification cursor-pointer">
                                         <div class="media d-flex align-items-center">
                                             <div class="media-left pr-0">
-                                                <div class="avatar mr-1 m-0"><img src="../../../app-assets/images/portrait/small/avatar-s-4.jpg" alt="avatar" height="39" width="39"></div>
+                                                <div class="avatar mr-1 m-0"><img src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-4.jpg') }}" alt="avatar" height="39" width="39"></div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading"><span class="text-bold-500">New file</span> has been uploaded</h6><small class="notification-text">4 hrs ago</small>
@@ -187,7 +187,7 @@
                                     <div class="d-flex justify-content-between cursor-pointer">
                                         <div class="media d-flex align-items-center border-0">
                                             <div class="media-left pr-0">
-                                                <div class="avatar mr-1 m-0"><img src="../../../app-assets/images/portrait/small/avatar-s-16.jpg" alt="avatar" height="39" width="39"></div>
+                                                <div class="avatar mr-1 m-0"><img src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-16.jpg') }}" alt="avatar" height="39" width="39"></div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading"><span class="text-bold-500">New customer</span> comment recieved</h6><small class="notification-text">2 days ago</small>
@@ -199,7 +199,7 @@
                             </ul>
                         </li>
                         <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                <div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">Available</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">Available</span></div><span><img class="round" src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right pb-0"><a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="bx bx-envelope mr-50"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="bx bx-check-square mr-50"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="bx bx-message mr-50"></i> Chats</a>
                                 <div class="dropdown-divider mb-0"></div><a class="dropdown-item" href="auth-login.html"><i class="bx bx-power-off mr-50"></i> Logout</a>
@@ -217,8 +217,8 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
-                        <div class="brand-logo"><img class="logo" src="../../../app-assets/images/logo/logo.png" /></div>
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ asset('dashboard/html/ltr/vertical-menu-template/index.html') }}">
+                        <div class="brand-logo"><img class="logo" src="{{ asset('dashboard/app-assets/images/logo/logo.png') }}" /></div>
                         <h2 class="brand-text mb-0">Frest</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
@@ -227,7 +227,7 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
-                <li class=" nav-item"><a href="../../../html/ltr/vertical-menu-template/index.html"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-2">2</span></a>
+                <li class=" nav-item"><a href="{{ asset('dashboard/html/ltr/vertical-menu-template/index.html') }}"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-2">2</span></a>
                     <ul class="menu-content">
                         <li class="active"><a href="dashboard-ecommerce.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="eCommerce">eCommerce</span></a>
                         </li>
@@ -417,17 +417,17 @@
                 </li>
                 <li class=" nav-item"><a href="#"><i class="menu-livicon" data-icon="unlink"></i><span class="menu-title" data-i18n="Starter kit">Starter kit</span></a>
                     <ul class="menu-content">
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-1-column.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="1 column">1 column</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-1-column.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="1 column">1 column</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-2-columns.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="2 columns">2 columns</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-2-columns.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="2 columns">2 columns</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-fixed-navbar.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Fixed navbar">Fixed navbar</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-fixed-navbar.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Fixed navbar">Fixed navbar</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-floating-navbar.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Floating navbar">Floating navbar</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-floating-navbar.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Floating navbar">Floating navbar</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-fixed.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Fixed layout">Fixed layout</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-fixed.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Fixed layout">Fixed layout</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template/sk-layout-static.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Static layout">Static layout</span></a>
+                        <li><a href="{{ asset('dashboard/starter-kit/ltr/vertical-menu-template/sk-layout-static.html') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="Static layout">Static layout</span></a>
                         </li>
                     </ul>
                 </li>
@@ -556,7 +556,7 @@
                                                 <button type="button" class="btn btn-primary glow">View Sales</button>
                                             </div>
                                             <div class="dashboard-content-right">
-                                                <img src="../../../app-assets/images/icon/cup.png" height="220" width="220" class="img-fluid" alt="Dashboard Ecommerce" />
+                                                <img src="{{ asset('dashboard/') }}app-assets/images/icon/cup.png" height="220" width="220" class="img-fluid" alt="Dashboard Ecommerce" />
                                             </div>
                                         </div>
                                     </div>
@@ -886,7 +886,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-10.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-10.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Jerry Lter</h6>
@@ -906,7 +906,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Pauly uez</h6>
@@ -926,7 +926,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lary Masey</h6>
@@ -946,7 +946,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lula Taylor</h6>
@@ -974,7 +974,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-9.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Jesus Lter</h6>
@@ -993,7 +993,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-10.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-10.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Pauly Dez</h6>
@@ -1013,7 +1013,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lary Masey</h6>
@@ -1033,7 +1033,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lula Taylor</h6>
@@ -1061,7 +1061,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-25.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-25.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Mera Lter</h6>
@@ -1080,7 +1080,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Pauly Dez</h6>
@@ -1100,7 +1100,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">jini mara</h6>
@@ -1120,7 +1120,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lula Taylor</h6>
@@ -1148,7 +1148,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-16.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/app-assets/images/portrait/small/avatar-s-16.jpg') }}" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Drako Lter</h6>
@@ -1168,7 +1168,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-1.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Pauly Dez</h6>
@@ -1188,7 +1188,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lary Masey</h6>
@@ -1208,7 +1208,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-2.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-2.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lvia Taylor</h6>
@@ -1236,7 +1236,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-19.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-19.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">yono Lter</h6>
@@ -1256,7 +1256,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Pauly Dez</h6>
@@ -1276,7 +1276,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-12.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lary Masey</h6>
@@ -1296,7 +1296,7 @@
                                                         <td class="pr-75">
                                                             <div class="media align-items-center">
                                                                 <a class="media-left mr-50" href="#">
-                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-25.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
+                                                                    <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-25.jpg" alt="avatar" class="rounded-circle" height="30" width="30">
                                                                 </a>
                                                                 <div class="media-body">
                                                                     <h6 class="media-heading mb-0">Lula Taylor</h6>
@@ -1386,7 +1386,7 @@
                                         <tbody>
                                             <tr>
                                                 <td class="py-1 line-ellipsis">
-                                                    <img class="rounded-circle mr-1" src="../../../app-assets/images/icon/fs.png" alt="card" height="24" width="24">Fastrack Watches
+                                                    <img class="rounded-circle mr-1" src="{{ asset('dashboard/') }}app-assets/images/icon/fs.png" alt="card" height="24" width="24">Fastrack Watches
                                                 </td>
                                                 <td class="py-1">
                                                     <i class="bx bx-trending-up text-success align-middle mr-50"></i><span>30%</span>
@@ -1405,7 +1405,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="py-1 line-ellipsis">
-                                                    <img class="rounded-circle mr-1" src="../../../app-assets/images/icon/puma.png" alt="card" height="24" width="24">Puma Shoes
+                                                    <img class="rounded-circle mr-1" src="{{ asset('dashboard/') }}app-assets/images/icon/puma.png" alt="card" height="24" width="24">Puma Shoes
                                                 </td>
                                                 <td class="py-1">
                                                     <i class="bx bx-trending-down text-danger align-middle mr-50"></i><span>15.5%</span>
@@ -1425,7 +1425,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="py-1 line-ellipsis">
-                                                    <img class="rounded-circle mr-1" src="../../../app-assets/images/icon/nike.png" alt="card" height="24" width="24">Nike Air Jordan
+                                                    <img class="rounded-circle mr-1" src="{{ asset('dashboard/') }}app-assets/images/icon/nike.png" alt="card" height="24" width="24">Nike Air Jordan
                                                 </td>
                                                 <td class="py-1">
                                                     <i class="bx bx-trending-up text-success align-middle mr-50"></i><span>70.30%</span>
@@ -1445,7 +1445,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="py-1 line-ellipsis">
-                                                    <img class="rounded-circle mr-1" src="../../../app-assets/images/icon/one-plus.png" alt="card" height="24" width="24">Oneplus 7 pro
+                                                    <img class="rounded-circle mr-1" src="{{ asset('dashboard/') }}app-assets/images/icon/one-plus.png" alt="card" height="24" width="24">Oneplus 7 pro
                                                 </td>
                                                 <td class="py-1">
                                                     <i class="bx bx-trending-up text-success align-middle mr-50"></i><span>10.4%</span>
@@ -1465,7 +1465,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="py-1 line-ellipsis">
-                                                    <img class="rounded-circle mr-1" src="../../../app-assets/images/icon/google.png" alt="card" height="24" width="24">Google Pixel 4 xl
+                                                    <img class="rounded-circle mr-1" src="{{ asset('dashboard/') }}app-assets/images/icon/google.png" alt="card" height="24" width="24">Google Pixel 4 xl
                                                 </td>
                                                 <td class="py-1"><i class="bx bx-trending-down text-danger align-middle mr-50"></i><span>-62.38%</span>
                                                 </td>
@@ -1509,7 +1509,7 @@
                     <div class="media m-75">
                         <a href="JavaScript:void(0);">
                             <div class="avatar mr-75">
-                                <img src="../../../app-assets/images/portrait/small/avatar-s-2.jpg" alt="avtar images" width="32" height="32">
+                                <img src="{{ asset('dashboard/') }}app-assets/images/portrait/small/avatar-s-2.jpg" alt="avtar images" width="32" height="32">
                                 <span class="avatar-status-online"></span>
                             </div>
                         </a>
@@ -1574,27 +1574,27 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/vendors/js/vendors.min.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/swiper.min.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/vendors/js/extensions/swiper.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/scripts/configs/vertical-menu-light.js"></script>
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <script src="../../../app-assets/js/scripts/components.js"></script>
-    <script src="../../../app-assets/js/scripts/footer.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/scripts/configs/vertical-menu-light.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/core/app-menu.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/core/app.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/scripts/components.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/scripts/footer.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+    <script src="{{ asset('dashboard/') }}app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
     <!-- END: Page JS-->
 
 </body>
