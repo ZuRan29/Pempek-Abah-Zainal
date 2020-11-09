@@ -12,11 +12,13 @@
 	<link rel="stylesheet" href="{{asset('dashboard/vendor/chartist/css/chartist.min.css')}}">
     <link href="{{asset('dashboard/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/css/style.css')}}" rel="stylesheet">
-	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 </head>
 <body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!--*******************
         Preloader start
     ********************-->
@@ -718,7 +720,7 @@
 							<li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
 						</ul>
                     </li>
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                    <li><a href="{{ route('menu.index') }}" class="ai-icon" aria-expanded="false">
                         <i class="flaticon-381-controls-3"></i>
                         <span class="nav-text">Daftar Menu</span>
                         </a>
@@ -732,8 +734,8 @@
 
 				<div class="add-menu-sidebar">
 					<img src="{{asset('dashboard/images/icon1.png')}}" alt=""/>
-					<p>Organize your menus through button bellow</p>
-					<a href="{{route('menu.create')}}" class="btn btn-primary btn-block light">+ Add Menus</a>
+					<p>Tambah Menu Baru</p>
+					<a href="{{route('menu.create')}}" class="btn btn-primary btn-block light">Tambah</a>
 				</div>
 				<div class="copyright">
 					<p><strong>Dashboard - Pempek Palembang Abah Zainal</strong> © 2020</p>
@@ -754,15 +756,7 @@
         ***********************************-->
 
         <!--**********************************
-            Footer start
-        ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
-            </div>
-        </div>
-        <!--**********************************
-            Footer end
+
         ***********************************-->
 
 		<!--**********************************
@@ -781,6 +775,8 @@
     <!--**********************************
         Scripts
     ***********************************-->
+
+
     <!-- Required vendors -->
     <script src="{{asset('dashboard/vendor/global/global.min.js')}}"></script>
 	<script src="{{asset('dashboard/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
