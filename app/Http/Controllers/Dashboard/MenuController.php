@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dashboard\Menu;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -14,7 +15,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('dashboard.menu.index');
+        $menus = Menu::all();
+        return view('dashboard.menu.index', compact('menus'));
     }
 
     /**
@@ -35,7 +37,35 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama_menu' => 'required',
+            'deskripsi' => 'required',
+            'harga' => 'required',
+            'foto' => 'required'
+        ]);
+
+        $data = $request->all();
+        dd($data);
+
+        $data['foto'] = $request->foto->getClientOriginalName();
+        $request->foto->move(public_path('images/menu/'.$data['nama_menu']), $data['foto']);
+
+        if ($data != null ) {
+            Menu::create($data);
+            return response()->json([
+                'status' => 'ok',
+                'messages' => 'Menu Baru Berhasil Ditambahkan',
+                'route' => route('menu.index')
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 'fail',
+                'messages' => 'Gagal Menambahkan Menu Baru'
+            ], 422);
+        }
+
+
+        // return redirect()->route('menu.index')->with('success', 'Menu Berhasil Ditambahkan');
     }
 
     /**

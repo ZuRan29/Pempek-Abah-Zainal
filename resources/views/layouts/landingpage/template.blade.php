@@ -306,7 +306,7 @@
 </section>
 <!-- footer_end -->
 <!--js start-->
-	<script src="{{ asset('assets/js/jquery-1.12.3.min.js') }}" type="text/javascript"></script>
+
     <script src="{{ asset('assets/js/bootstrap.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/js/plugins/datetimepicker/moment.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/js/plugins/datetimepicker/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>

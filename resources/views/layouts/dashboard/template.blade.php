@@ -718,7 +718,7 @@
 							<li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
 						</ul>
                     </li>
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                    <li><a href="{{route('menu.index')}}" class="ai-icon" aria-expanded="false">
                         <i class="flaticon-381-controls-3"></i>
                         <span class="nav-text">Daftar Menu</span>
                         </a>
@@ -756,11 +756,6 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
-            </div>
-        </div>
         <!--**********************************
             Footer end
         ***********************************-->
