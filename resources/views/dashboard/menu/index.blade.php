@@ -26,12 +26,12 @@
                                 <div class="carousel-item active">
                                     <img class="d-block w-100" src="{{asset('dashboard/images/big/img3.jpg')}}" alt="First slide">
                                 </div>
-                                <div class="carousel-item">
+                                {{-- <div class="carousel-item">
                                     <img class="d-block w-100" src="{{asset('dashboard/images/big/img4.jpg')}}" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
                                     <img class="d-block w-100" src="{{asset('dashboard/images/big/img5.jpg')}}" alt="Third slide">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

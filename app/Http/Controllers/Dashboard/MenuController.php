@@ -15,6 +15,9 @@ class MenuController extends Controller
      */
     public function index()
     {
+        $data = Menu::all();
+        // $data['harga'] = "Rp. " . number_format($data->harga,0,',','.');
+        dd($data);
         return view('dashboard.menu.index');
     }
 
