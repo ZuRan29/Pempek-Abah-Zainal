@@ -18,36 +18,31 @@
             </div>
         </div>
         <div class="row">
+            @foreach ($data as $menu)
             <div class="col-xl-6">
                 <div class="card mb-3">
                     <div class="bootstrap-carousel">
                         <div class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{asset('dashboard/images/big/img3.jpg')}}" alt="First slide">
+                                    <img class="d-block w-100" src="{{asset('images/menu/'.$menu->nama_menu)}}/{{$menu->foto}}" width="200px" alt="First slide">
                                 </div>
-                                {{-- <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{asset('dashboard/images/big/img4.jpg')}}" alt="Second slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{asset('dashboard/images/big/img5.jpg')}}" alt="Third slide">
-                                </div> --}}
                             </div>
                         </div>
                     </div>
                     <div class="card-header">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{{ $menu->nama_menu }}</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">He lay on his armour-like back, and if he lifted his head a little
-                        </p>
+                        <p class="card-text">{{ $menu->deskripsi }}</p>
                     </div>
                     <div class="card-footer">
-                        <p class="card-text d-inline">Card footer</p>
-                        <a href="javascript:void()" class="card-link float-right">Card link</a>
+                        <p class="card-text d-inline">Harga</p>
+                        <a href="javascript:void()" class="card-link float-right">{{ 'Rp. ' . number_format($menu->harga,0,"." , ",") }}</a>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </div>
