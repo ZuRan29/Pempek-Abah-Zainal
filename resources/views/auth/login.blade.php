@@ -101,9 +101,9 @@
                                         @csrf
 
                                         <div class="form-group">
-                                            <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="hello@example.com">
-                                            @error('email')
+                                            <label class="mb-1"><strong>Username / Email</strong></label>
+                                            <input type="text" class="form-control" name="username" value="{{ old('email') }}" placeholder="hello@example.com">
+                                            @error('username')
                                                 <script>
                                                     Swal.fire({
                                                         icon: 'error',

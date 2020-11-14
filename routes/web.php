@@ -28,8 +28,25 @@ Route::get('/', function () {
 
 // Dashboard Admin
     Route::group(['middleware' => ['auth']], function () {
+
+        // Admin Dashboard
         Route::get('admin/dashboard', [DashboardController::class,'index'])->name('dashboard');
+
+        // User
+        Route::resource('admin/dashboard/users', 'Dashboard\Auth\UserController');
+
+        // Role
+        Route::resource('admin/dashboard/role', 'Dashboard\Auth\RoleController');
+
+        // Permission
+        Route::resource('admin/dashboard/permissions', 'Dashboard\Auth\PermissionController');
+
+        // Profile Dashboard
+        Route::get('admin/dashboard/profile', 'Dashboard\ProfileController@index')->name('dashboard.profile');
+
+        // Menu
         Route::resource('admin/dashboard/menu', 'Dashboard\MenuController');
+
     });
 
 // Merkury Chat
@@ -49,7 +66,7 @@ Route::get('/', function () {
         return view('whatsapp.chat-api');
     });
     Route::post('dashboard-blast/chat-api/send', [ChatApiControlller::class, 'index'])->name('chat-api.send');
-
+    Route::get('dashboard-blast/chat-api/send/new', 'Broadcast\ChatApiControlller@getDatabase');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Auth::routes();

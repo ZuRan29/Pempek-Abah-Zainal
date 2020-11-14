@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Pempek Palembang Abah Zainal</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('dashboard/images/favicon.png')}}">
@@ -14,7 +15,7 @@
     <link href="{{asset('dashboard/css/style.css')}}" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -678,9 +679,21 @@
                                     <img src="{{asset('dashboard/images/profile/pic1.jpg')}}" width="20" alt=""/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{asset('dashboard/app-profile.html')}}" class="dropdown-item ai-icon">
+                                    <a href="{{route('dashboard.profile')}}" class="dropdown-item ai-icon">
                                         <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                         <span class="ml-2">Profile </span>
+                                    </a>
+                                    <a href="{{route('users.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-user-circle text-primary" style="margin-right: 0.2rem"></i>
+                                        <span class="ml-2">Users</span>
+                                    </a>
+                                    <a href="{{route('role.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-users text-primary" style="margin-right: 0.2rem"></i>
+                                        <span class="ml-2">Roles</span>
+                                    </a>
+                                    <a href="{{route('permissions.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-wrench text-primary" style="margin-right: 0.3rem"></i>
+                                        <span class="ml-2">Permissions</span>
                                     </a>
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item ai-icon">
                                         <svg id="icon-logout" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
@@ -793,5 +806,9 @@
 	<!-- Dashboard 1 -->
 	<script src="{{asset('dashboard/js/dashboard/dashboard-1.js')}}"></script>
 
+    <!-- Datatable -->
+    <script src="{{ asset ('dashboard/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset ('dashboard/js/plugins-init/datatables.init.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 </body>
 </html>
