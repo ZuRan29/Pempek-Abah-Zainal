@@ -38,9 +38,11 @@ class PermissionTableSeeder extends Seeder
         ];
 
         foreach ($permissions as $permission) {
-            Permission::firstOrCreate([
+            $toPermission = Permission::firstOrCreate([
                 'name' => $permission
             ]);
+
+            $toPermission->syncRoles('super admin');
         }
     }
 }
