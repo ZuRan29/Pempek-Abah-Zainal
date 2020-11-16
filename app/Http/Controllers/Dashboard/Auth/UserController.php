@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -28,7 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('dashboard.auth.user.create');
+        $roles = Role::all();
+        return view('dashboard.auth.user.create', compact('roles'));
     }
 
     /**
@@ -43,13 +45,15 @@ class UserController extends Controller
             'name' => 'required|string',
             'username' => 'required|string',
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'role' => 'required'
         ]);
 
         if ($request != null) {
             $input = $request->all();
             $input['password'] = Hash::make($request->password);
             $user = User::create($input);
+            $user->assignRole($request->input('role'));
             return response()->json([
                 'status' => "ok",
                 'messages' => "User Baru Berhasil Ditambahkan",

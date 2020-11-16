@@ -42,7 +42,7 @@ class PermissionTableSeeder extends Seeder
                 'name' => $permission
             ]);
 
-            $toPermission->syncRoles('super admin');
+            // $toPermission->syncRoles('super admin');
         }
     }
 }

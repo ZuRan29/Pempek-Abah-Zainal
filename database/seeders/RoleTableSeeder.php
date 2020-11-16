@@ -21,7 +21,11 @@ class RoleTableSeeder extends Seeder
         ];
 
         foreach ($roles as $role) {
-            $role = Role::firstOrCreate(['name' => $role]);
+            $toRole = Role::firstOrCreate(['name' => $role]);
+
+            if( $toRole->name == 'super admin' ) {
+                $toRole->givePermissionTo(Permission::all());
+            }
         }
     }
 }
