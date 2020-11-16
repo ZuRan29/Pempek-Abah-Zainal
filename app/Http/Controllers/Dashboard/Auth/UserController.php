@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
@@ -87,7 +88,9 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('dashboard.auth.user.edit', compact('user'));
+        $roles = Role::all();
+        $userRole = $user->roles->pluck('name','name')->all();
+        return view('dashboard.auth.user.edit', compact('user','roles','userRole'));
     }
 
     /**
@@ -106,19 +109,15 @@ class UserController extends Controller
             'password' => 'required'
         ]);
 
-
-
         if ($request != null) {
             $user = User::find($id);
             $input = $request->all();
             $input['password'] = Hash::make($request->password);
             $user->update($input);
 
-            // return response()->json([
-            //     'status' => 'ok',
-            //     'messages' => 'User Berhasil Di Perbaharui',
-            //     'route' => route('users.index')
-            // ], 200);
+            DB::table('model_has_roles')->where('model_id',$id)->delete();
+            $user->assignRole($request->input('role'));
+            
             return redirect()->route('users.index')->with('success', 'User Berhasil Di Perbaharui');
 
         } else {
