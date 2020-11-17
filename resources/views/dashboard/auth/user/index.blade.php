@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body" style="padding-top: 0; margin: 0;">
+                        <div class="card-body" style="padding-top: 0; padding-left: 10px; padding-right: 0; margin: 0;">
                             <div class="row">
                                 <div class="col-lg-9">
                                     <div class="card-header">

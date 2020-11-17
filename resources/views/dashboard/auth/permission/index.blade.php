@@ -20,18 +20,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="card-header">
-                                    <h4 class="card-title">Daftar Permission</h4>
+                        <div class="card-body" style="padding-top: 0; padding-left: 10px; padding-right: 0; margin: 0;">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Daftar Permission</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                @can('permission-create')
-                                    <a href="{{ route('permissions.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-sm">Buat Permission Baru <span
-                                        class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
-                                    </button></a>
-                                @endcan
+                                <div class="col-lg-3">
+                                    @can('permission-create')
+                                        <a href="{{ route('permissions.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-xs">Buat Permission Baru <span
+                                            class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
+                                        </button></a>
+                                    @endcan
+                                </div>
                             </div>
                         </div>
                         <div class="card-body">
