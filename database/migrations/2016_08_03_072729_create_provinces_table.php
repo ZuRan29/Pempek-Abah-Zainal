@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMenuTable extends Migration
+class CreateProvincesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateMenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nama_menu', 150);
-            $table->text('deskripsi');
-            $table->integer('harga');
-            $table->string('foto', 150);
+        Schema::create(config('laravolt.indonesia.table_prefix').'provinces', function (Blueprint $table) {
+            $table->char('id', 2);
+            $table->string('name', 255);
+            $table->text('meta')->nullable();
+            $table->primary('id');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateMenuTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::drop(config('laravolt.indonesia.table_prefix').'provinces');
     }
 }

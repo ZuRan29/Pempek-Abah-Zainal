@@ -22,9 +22,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing Page
-Route::get('/', function () {
-    return view('layouts.landingpage.menu');
-});
+// Route::get('/', function () {
+//     return view('layouts.landingpage.menu');
+// });
+// Landing Page
+    Route::get('/', 'Landing\HomeController@index')->name('home');
 
 // Dashboard Admin
     Route::group(['middleware' => ['auth']], function () {
@@ -47,6 +49,9 @@ Route::get('/', function () {
         // Menu
         Route::resource('admin/dashboard/menu', 'Dashboard\MenuController');
 
+        // Images Landing
+        Route::resource('admin/dashboard/landing-images', 'Dashboard\ImagesLandingController');
+
     });
 
 // Merkury Chat
@@ -67,7 +72,7 @@ Route::get('/', function () {
     });
     Route::post('dashboard-blast/chat-api/send', [ChatApiControlller::class, 'index'])->name('chat-api.send');
     Route::get('dashboard-blast/chat-api/send/new', 'Broadcast\ChatApiControlller@getDatabase');
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 // Auth::routes();
     // Authentication Routes...

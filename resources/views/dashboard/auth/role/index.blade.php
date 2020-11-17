@@ -20,18 +20,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="card-header">
-                                    <h4 class="card-title">Daftar Role</h4>
+                        <div class="card-body" style="padding-top: 0; margin: 0;">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Daftar Role</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                @can('role-create')
-                                <a href="{{ route('role.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-sm">Buat Role Baru <span
-                                    class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
-                                </button></a>
-                                @endcan
+                                <div class="col-lg-3">
+                                    @can('role-create')
+                                    <a href="{{ route('role.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-sm">Buat Role Baru <span
+                                        class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
+                                    </button></a>
+                                    @endcan
+                                </div>
                             </div>
                         </div>
                         <div class="card-body">

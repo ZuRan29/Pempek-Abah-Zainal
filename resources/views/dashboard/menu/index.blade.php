@@ -53,4 +53,5 @@
     toastr.success('{{ session("success") }}');
 </script>
 @endif
+
 @endsection

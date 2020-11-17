@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     .modalbox.success,
     .modalbox.error {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -348,4 +348,24 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+@extends('layouts.dashboard.template')
+@section('content')
+<div class="authincation h-100" style="padding-top: 235px; padding-left: 280px;">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-5">
+                <div class="form-input-content text-center error-page">
+                    <h1 class="error-text  font-weight-bold">403</h1>
+                    <h4><i class="fa fa-times-circle text-danger"></i> Forbidden Error!</h4>
+                    <p>You do not have permission to view this resource.</p>
+                    {{-- <div>
+                        <a class="btn btn-primary" href="./index.html">Back to Home</a>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+@endsection

@@ -729,7 +729,7 @@
                         <ul aria-expanded="false">
 							<li><a href="{{asset('dashboard/index.html')}}">Dashboard</a></li>
 							<li><a href="{{asset('dashboard/page-analytics.html')}}">Analytics</a></li>
-							<li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
+                            <li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
 						</ul>
                     </li>
                     <li><a href="{{ route('menu.index') }}" class="ai-icon" aria-expanded="false">
@@ -742,6 +742,15 @@
                         <span class="nav-text">Pesanan</span>
                         </a>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-381-television"></i>
+                        <span class="nav-text">Landing Pages</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{{route('landing-images.index')}}">About - Foto</a></li>
+                        <li><a href="{{asset('dashboard/page-analytics.html')}}">Carousel - Foto</a></li>
+                    </ul>
+                </li>
                 </ul>
 
 				<div class="add-menu-sidebar">

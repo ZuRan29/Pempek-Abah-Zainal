@@ -36,7 +36,7 @@ class PermissionTableSeeder extends Seeder
             'artikel-edit',
             'artikel-delete',
         ];
-
+        
         foreach ($permissions as $permission) {
             $toPermission = Permission::firstOrCreate([
                 'name' => $permission
