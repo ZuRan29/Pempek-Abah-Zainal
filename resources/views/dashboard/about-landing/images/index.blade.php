@@ -14,11 +14,6 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Daftar Foto Landing Pages</a></li>
                 </ol>
             </div>
-            <div class="col-lg-3">
-                <a href="{{ route('users.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-sm">Buat User Baru <span
-                    class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
-                </button></a>
-            </div>
         </div>
 
         <div class="row">
