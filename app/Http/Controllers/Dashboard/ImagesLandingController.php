@@ -24,7 +24,7 @@ class ImagesLandingController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.about-landing.images.create');
     }
 
     /**

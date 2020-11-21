@@ -15,13 +15,12 @@
                 </ol>
             </div>
         </div>
-
         <div class="row">
             <div class="col-xl-6">
-                <div class="card mb-3">
-                    <img class="card-img-top img-fluid" src="./images/card/1.png" alt="Card image cap">
+                <div class="card mb-3 shadow shadow-dark">
+                    <img class="card-img-top img-fluid" src="{{ asset('dashboard/images/card/1.png') }}" alt="Card image cap">
                     <div class="card-header">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Judul Coba</h5>
                     </div>
                     <div class="card-body">
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

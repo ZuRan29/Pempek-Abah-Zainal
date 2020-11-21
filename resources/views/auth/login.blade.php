@@ -87,6 +87,7 @@
 
 </head>
 <body class="h-100">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -102,6 +103,14 @@
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Username / Email</strong></label>
                                             <input type="text" class="form-control" name="username" value="{{ old('email') }}" placeholder="hello@example.com">
+                                            @if (session('error'))
+                                                <script>
+                                                    Swal.fire({
+                                                        icon: 'error',
+                                                        title: 'Email-Address Atau Password Salah.'
+                                                    });
+                                                </script>
+                                            @endif
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
@@ -138,18 +147,7 @@
 	<script src="{{asset('dashboard/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
     <script src="{{asset('dashboard/js/custom.min.js')}}"></script>
     <script src="{{asset('dashboard/js/deznav-init.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    @if (session('error'))
-    <script>
-        swal({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success",
-            button: "Aww yiss!",
-            className: "swal-back",
-            });
-    </script>
-@endif
+
 </body>
 
 </html>
