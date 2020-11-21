@@ -98,4 +98,81 @@ Mohon ditunggu. Terima kasih 🙏🏽';
         echo $result;
         }
     }
+
+    public function sendFile()
+    {
+
+        $broadcast = DB::table('bc_wa_2')->where('status', '0')->limit(250)->get();
+
+        // dd($broadcast);
+
+        foreach ($broadcast as $broad) {
+            $coba = DB::table('bc_wa_2')->where('id', $broad->id)->update(['status' => '1']);
+            // dd($coba);
+            // $this->db->query("UPDATE bc_wa_2 SET send = '1' WHERE id = ".$broad->id);
+            // dd($broad['nama']);
+            $message = 'Salam Bapak / Ibu '. $broad->nama .'
+*Workshop Online*
+Pelatihan dan Sertifikasi Hypnotherapy
+*FUNDAMENTAL & ADVANCED HYPNOTHERAPY*
+Gelar Profesi / Non Akademik (CH & CHt) dari Indonesian Board of Hypnotherapy (IBH)
+
+7 Sesi Pertemuan
+7 - 14 Desember 2020
+18.30 - 21.00 WIB
+
+*SILABUS PELATIHAN :*
+•  Fundamental Hypnotherapy (3 Sesi Pertemuan)
+•  Advanced Hypnotherapy (2 Sesi Pertemuan)
+•  Smart – Self Healing (2 sesi Pertemuan)
+
+*Link Regestrasi* https://hypnotherapy.diklatonline.id/
+
+Harga Normal : ~Rp. 3.500.000~,
+*Harga Promo hanya Rp. 1.250.000,-*
+
+*Fasilitas Yang Anda Dapatkan :*
+•  Mengikuti 7 Sesi Pertemuan
+•  Materi Pelatihan
+•  Video Rekaman Pembelajaran
+•  Sertifikat Fundamental Hypnotherapy (CH)
+•  Sertifikat Advanced Hypnotherapy (CHt)
+•  Sertifikat CH CHt Good Standing
+•  Membership dari IBH
+•  Gelar non akademik CH dan CHt
+•  Gratis Pengiriman Sertifikat
+•  *Smart - Self Healing (2 Sesi Pertemuan) Senilai Rp 750.000,-*
+
+*Kontak Panitia*
+
+*https://wa.me/628111102495*
+*https://wa.me/628111109423*';
+
+            // $message = 'Halo';
+        $data = [
+            'phone' => $broad->telp,
+            'body' => 'http://diklatonline.id/bc_wa/bc_hypno.jpg',
+            'filename' => 'bc_hypno',
+            'caption' => $message
+        ];
+
+        // dd($data);
+        $url = 'https://eu145.chat-api.com/instance143493/sendFile?token=1atto4m47iqljn2e';
+
+        $realData = json_encode($data);
+
+        $options = stream_context_create(['http' => [
+            'method'  => 'POST',
+            'header'  => 'Content-type: application/json',
+            'content' => $realData,
+            ]
+        ]);
+
+        // Send a request
+        $result = file_get_contents($url, false, $options);
+
+        echo $result;
+
+        }
+    }
 }
