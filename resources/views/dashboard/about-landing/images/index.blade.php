@@ -14,6 +14,14 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Daftar Foto Landing Pages</a></li>
                 </ol>
             </div>
+            <div class="row">
+                <div class="col-lg-9"></div>
+                <div class="col-lg-3">
+                    <a href="{{ route('landing-images.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-xs">Tambah Foto Baru <span
+                        class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
+                    </button></a>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-xl-6">
