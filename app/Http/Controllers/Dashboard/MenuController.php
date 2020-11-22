@@ -45,13 +45,14 @@ class MenuController extends Controller
         ]);
 
         $data = $request->all();
+        
         $data['foto'] = $request->foto->getClientOriginalName();
         $request->foto->move(public_path('images/menu/'. $request->nama_menu), $data['foto']);
 
         Menu::create($data);
 
         return redirect()->route('menu.index')->with('success','Menu Baru Berhasil Ditambahkan !');
-        
+
     }
 
     /**

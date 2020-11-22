@@ -74,6 +74,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('dashboard-blast/chat-api/send/new', 'Broadcast\ChatApiControlller@getDatabase');
     // Send File
     Route::get('dashboard-blast/chat-api/send/file', 'Broadcast\ChatApiControlller@sendFile');
+    // Send File New
+    Route::get('dashboard-blast/chat-api/send/file-new', 'Broadcast\ChatApiControlller@sendFileNew');
 
 // Auth::routes();
     // Authentication Routes...

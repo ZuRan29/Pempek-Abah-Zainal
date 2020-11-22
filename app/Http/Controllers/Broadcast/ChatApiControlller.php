@@ -102,12 +102,12 @@ Mohon ditunggu. Terima kasih 🙏🏽';
     public function sendFile()
     {
 
-        $broadcast = DB::table('bc_wa_2')->where('status', '0')->limit(250)->get();
+        $broadcast = DB::table('bc_wa')->where('status', '0')->limit(250)->get();
 
         // dd($broadcast);
 
         foreach ($broadcast as $broad) {
-            $coba = DB::table('bc_wa_2')->where('id', $broad->id)->update(['status' => '1']);
+            $coba = DB::table('bc_wa')->where('id', $broad->id)->update(['status' => '1']);
             // dd($coba);
             // $this->db->query("UPDATE bc_wa_2 SET send = '1' WHERE id = ".$broad->id);
             // dd($broad['nama']);
@@ -157,6 +157,77 @@ Harga Normal : ~Rp. 3.500.000~,
         ];
 
         // dd($data);
+        $url = 'https://eu145.chat-api.com/instance143493/sendFile?token=1atto4m47iqljn2e';
+
+        $realData = json_encode($data);
+
+        $options = stream_context_create(['http' => [
+            'method'  => 'POST',
+            'header'  => 'Content-type: application/json',
+            'content' => $realData,
+            ]
+        ]);
+
+        // Send a request
+        $result = file_get_contents($url, false, $options);
+
+        echo $result;
+
+        }
+    }
+
+
+    public function sendFileNew()
+{
+
+        $broadcast = DB::table('bc_wa_3')->where('status', '0')->limit(250)->get();
+
+        // dd($broadcast);
+
+        foreach ($broadcast as $broad) {
+            $coba = DB::table('bc_wa_3')->where('id', $broad->id)->update(['status' => '1']);
+
+            $message = 'Salam Bapak / Ibu '. $broad->nama .'
+Kelas Online – Webinar
+MEMAHAMI 8 LIFE SKILLS UNTUK MERAIH SUKSES
+
+Selasa, 24 November 2020, 13.00 - 15.00 WIB
+
+Life Skills tak pelak merupakan elemen fundamental untuk meraih keberhasilan hidup yang epik. Sayangnya, ilmu tentang life skills ini justru jarang diajarkan di bangku sekolah dan kuliah. Kelas  yang powerful ini mengajak Anda untuk menjelajahi beragam tema kunci tentang life skills
+
+•	Apa saja tipe life skills yang paling dibutuhkan untuk sukses di era digital yang serba bergerak dengan cepat ini?
+•	Bagaimana tahapan dan langkah praktikal untuk mempelajari dan menerapkan beragam life skills secara efektif?
+•	Kenapa kegagalan dalam menguasai life skills akan membuat bisnis ataupun karir kita bisa termehek-mehek dan akhirnya stagnan?
+
+Materi
+1.	Self Learning Skills
+2.	Grit & Resiliency Skills
+3.	Creative Problem Solving Skills
+4.	Personal Productivity Skills
+5.	Mind Management Skills
+6.	Professional Manner
+7.	Digital Literacy Skills
+8.	Money Management Skills
+
+Delapan life skills di atas dibedah secara mendalam, aplikatif dan menyajikan beragam contoh penerapannya yang powerful. Dijamin Anda akan dibuat terkesima dengan kedalaman ulasan dan penyajiannya.
+
+Harga Normal Rp. 450.000,-
+Investasi Khusus Alumni Rp. 50.000,-
+
+TEMPAT TERBATAS
+
+Registrasi Segera di https://order.diklatonline.id/MeraihSukses
+
+Kontak Panitia 0813 1888 6103';
+
+            // $message = 'Halo';
+        $data = [
+            'phone' => '62'. $broad->telp,
+            'body' => 'http://diklatonline.id/bc_wa/life_skills.jpeg',
+            'filename' => 'life_skills.jpeg',
+            'caption' => $message
+        ];
+
         $url = 'https://eu145.chat-api.com/instance143493/sendFile?token=1atto4m47iqljn2e';
 
         $realData = json_encode($data);

@@ -49,7 +49,7 @@ class LoginController extends Controller
         $input = $request->all();
 
         $loginType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username' ;
-
+        
         if(auth()->attempt(array($loginType => $input['username'], 'password' => $input['password'])))
         {
             return redirect()->route('dashboard');
