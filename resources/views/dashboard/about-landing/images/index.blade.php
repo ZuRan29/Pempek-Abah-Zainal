@@ -14,10 +14,17 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Daftar Foto Landing Pages</a></li>
                 </ol>
             </div>
-            <div class="row">
-                <div class="col-lg-9"></div>
+            <div class="row mt-4">
+                <div class="col-lg-9">
+                    <div class="alert alert-success" style="height: 35px; line-height:30px; padding: 3px 10px; margin-bottom: 1px; font-size:15px;" role="alert">
+                        <strong>Maksimal 6 foto</strong>
+                        <button type="button" class="close" style="padding:3px 1px;" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
                 <div class="col-lg-3">
-                    <a href="{{ route('landing-images.create') }}"><button type="button" style="margin-top:15px;" class="btn btn-info btn-xs">Tambah Foto Baru <span
+                    <a href="{{ route('landing-images.create') }}"><button type="button" class="btn btn-info btn-xs">Tambah Foto Baru <span
                         class="btn-icon-right"><i style="margin-right:10px" class="fa fa-plus color-info"></i></span>
                     </button></a>
                 </div>

@@ -188,47 +188,39 @@ Harga Normal : ~Rp. 3.500.000~,
             $coba = DB::table('bc_wa_3')->where('id', $broad->id)->update(['status' => '1']);
 
             $message = 'Salam Bapak / Ibu '. $broad->nama .'
-Kelas Online – Webinar
-MEMAHAMI 8 LIFE SKILLS UNTUK MERAIH SUKSES
+Kelas Kompetensi – Full Online
+BIMBINGAN TEKNIS & SERTIFIKASI KOMPETENSI
+AHLI MUDA K3 KONSTRUKSI – BNSP
+(Peraturan Menteri PUPR No. 21 Tahun 2019 & Permen PUPR No 14 tahun 2020)
 
-Selasa, 24 November 2020, 13.00 - 15.00 WIB
+Metode Pelatihan
+•  E- learning
+•  Tatap muka Online - Webinar
+•  Sertifikasi Komptensi BNSP – Online
 
-Life Skills tak pelak merupakan elemen fundamental untuk meraih keberhasilan hidup yang epik. Sayangnya, ilmu tentang life skills ini justru jarang diajarkan di bangku sekolah dan kuliah. Kelas  yang powerful ini mengajak Anda untuk menjelajahi beragam tema kunci tentang life skills
+Tanggal Kegiatan : 14 – 19 Desember 2020
 
-•	Apa saja tipe life skills yang paling dibutuhkan untuk sukses di era digital yang serba bergerak dengan cepat ini?
-•	Bagaimana tahapan dan langkah praktikal untuk mempelajari dan menerapkan beragam life skills secara efektif?
-•	Kenapa kegagalan dalam menguasai life skills akan membuat bisnis ataupun karir kita bisa termehek-mehek dan akhirnya stagnan?
+Narasumber dari :
+•  Tim Ditjen Bina Konstruksi - Kementerian PUPR
+•  Praktisi dan Konsultan K3 Konstruksi
 
-Materi
-1.	Self Learning Skills
-2.	Grit & Resiliency Skills
-3.	Creative Problem Solving Skills
-4.	Personal Productivity Skills
-5.	Mind Management Skills
-6.	Professional Manner
-7.	Digital Literacy Skills
-8.	Money Management Skills
+Promo Akhir Tahun  4.750.000,-
 
-Delapan life skills di atas dibedah secara mendalam, aplikatif dan menyajikan beragam contoh penerapannya yang powerful. Dijamin Anda akan dibuat terkesima dengan kedalaman ulasan dan penyajiannya.
+Selengkapnya di  https://kelassmart.com/k3bnsp/
 
-Harga Normal Rp. 450.000,-
-Investasi Khusus Alumni Rp. 50.000,-
+WA Panitia https://wa.me/628111565770
 
-TEMPAT TERBATAS
-
-Registrasi Segera di https://order.diklatonline.id/MeraihSukses
-
-Kontak Panitia 0813 1888 6103';
+Panitia  : 0811 1565 770 / 0811 9997 339';
 
             // $message = 'Halo';
         $data = [
             'phone' => '62'. $broad->telp,
-            'body' => 'http://diklatonline.id/bc_wa/life_skills.jpeg',
-            'filename' => 'life_skills.jpeg',
+            'body' => 'http://diklatonline.id/bc_wa/ahli_muda_k3.jpeg',
+            'filename' => 'ahli_muda_k3.jpeg',
             'caption' => $message
         ];
 
-        $url = 'https://eu145.chat-api.com/instance143493/sendFile?token=1atto4m47iqljn2e';
+        $url = 'https://eu114.chat-api.com/instance144661/sendFile?token=sdje75wgo6ci2f4w';
 
         $realData = json_encode($data);
 
