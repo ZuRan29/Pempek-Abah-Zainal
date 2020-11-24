@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dashboard\ImagesLanding;
 use Illuminate\Http\Request;
 
 class ImagesLandingController extends Controller
@@ -35,9 +36,18 @@ class ImagesLandingController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request[
+        $this->validate($request, [
             'foto' => 'required|mimes:png,jpg,jpeg'
         ]);
+
+        $data = $request->all();
+        $data['foto'] = $request->foto->getClientOriginalName();
+        $request->foto->move(public_path('images/landing/menu_foto'), $data['foto']);
+
+        ImagesLanding::create($data);
+
+        return redirect()->route('landing-images.index')->with('success','Foto Berhasil Ditambahkan');
+
     }
 
     /**

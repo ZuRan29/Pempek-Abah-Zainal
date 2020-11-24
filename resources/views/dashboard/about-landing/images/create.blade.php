@@ -26,7 +26,8 @@
                     <div class="card-body">
                         <div class="card-body">
                             <div class="basic-form">
-                                <form id="user-create" action="{{ route('users.store') }}" method="POST">
+                                <form id="user-create" action="{{ route('landing-images.store') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">
                                             Foto
@@ -38,7 +39,7 @@
                                                     <span class="input-group-text">Upload</span>
                                                 </div>
                                                 <div class="custom-file">
-                                                    <input type="foto" class="custom-file-input">
+                                                    <input type="file" name="foto" class="custom-file-input">
                                                     <label class="custom-file-label">Choose file</label>
                                                 </div>
                                             </div>
