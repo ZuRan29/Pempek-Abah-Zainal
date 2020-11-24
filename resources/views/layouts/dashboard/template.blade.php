@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Pempek Palembang Abah Zainal</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('dashboard/images/favicon.png')}}">
@@ -12,11 +13,13 @@
 	<link rel="stylesheet" href="{{asset('dashboard/vendor/chartist/css/chartist.min.css')}}">
     <link href="{{asset('dashboard/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/css/style.css')}}" rel="stylesheet">
-	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 </head>
 <body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!--*******************
         Preloader start
     ********************-->
@@ -671,21 +674,32 @@
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
 									<div class="header-info">
-										<span>Hello, <strong>Samuel</strong></span>
+										<span>Hello, <strong>{{ Auth::user()->name }}</strong></span>
 									</div>
                                     <img src="{{asset('dashboard/images/profile/pic1.jpg')}}" width="20" alt=""/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{asset('dashboard/app-profile.html')}}" class="dropdown-item ai-icon">
+
+                                    <a href="{{route('dashboard.profile')}}" class="dropdown-item ai-icon">
                                         <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                         <span class="ml-2">Profile </span>
                                     </a>
-                                    <a href="{{asset('dashboard/email-inbox.html')}}" class="dropdown-item ai-icon">
-                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                        <span class="ml-2">Inbox </span>
+                                    @role('super admin')
+                                    <a href="{{route('users.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-user-circle text-primary" style="margin-right: 0.2rem"></i>
+                                        <span class="ml-2">Users</span>
                                     </a>
+                                    <a href="{{route('role.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-users text-primary" style="margin-right: 0.2rem"></i>
+                                        <span class="ml-2">Roles</span>
+                                    </a>
+                                    <a href="{{route('permissions.index')}}" class="dropdown-item ai-icon">
+                                        <i class="fa fa-wrench text-primary" style="margin-right: 0.3rem"></i>
+                                        <span class="ml-2">Permissions</span>
+                                    </a>
+                                    @endrole
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item ai-icon">
-                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <svg id="icon-logout" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                         <span class="ml-2">Logout </span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -715,10 +729,14 @@
                         <ul aria-expanded="false">
 							<li><a href="{{asset('dashboard/index.html')}}">Dashboard</a></li>
 							<li><a href="{{asset('dashboard/page-analytics.html')}}">Analytics</a></li>
-							<li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
+                            <li><a href="{{asset('dashboard/page-review.html')}}">Review</a></li>
 						</ul>
                     </li>
+<<<<<<< HEAD
                     <li><a href="{{route('menu.index')}}" class="ai-icon" aria-expanded="false">
+=======
+                    <li><a href="{{ route('menu.index') }}" class="ai-icon" aria-expanded="false">
+>>>>>>> indonesia
                         <i class="flaticon-381-controls-3"></i>
                         <span class="nav-text">Daftar Menu</span>
                         </a>
@@ -728,12 +746,21 @@
                         <span class="nav-text">Pesanan</span>
                         </a>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-381-television"></i>
+                        <span class="nav-text">Landing Pages</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{{route('landing-images.index')}}">About - Foto</a></li>
+                        <li><a href="{{asset('dashboard/page-analytics.html')}}">Carousel - Foto</a></li>
+                    </ul>
+                </li>
                 </ul>
 
 				<div class="add-menu-sidebar">
 					<img src="{{asset('dashboard/images/icon1.png')}}" alt=""/>
-					<p>Organize your menus through button bellow</p>
-					<a href="{{route('menu.create')}}" class="btn btn-primary btn-block light">+ Add Menus</a>
+					<p>Tambah Menu Baru</p>
+					<a href="{{route('menu.create')}}" class="btn btn-primary btn-block light">Tambah</a>
 				</div>
 				<div class="copyright">
 					<p><strong>Dashboard - Pempek Palembang Abah Zainal</strong> © 2020</p>
@@ -754,10 +781,14 @@
         ***********************************-->
 
         <!--**********************************
+<<<<<<< HEAD
             Footer start
         ***********************************-->
         <!--**********************************
             Footer end
+=======
+
+>>>>>>> indonesia
         ***********************************-->
 
 		<!--**********************************
@@ -776,6 +807,7 @@
     <!--**********************************
         Scripts
     ***********************************-->
+
     <!-- Required vendors -->
     <script src="{{asset('dashboard/vendor/global/global.min.js')}}"></script>
 	<script src="{{asset('dashboard/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
@@ -796,5 +828,9 @@
 	<!-- Dashboard 1 -->
 	<script src="{{asset('dashboard/js/dashboard/dashboard-1.js')}}"></script>
 
+    <!-- Datatable -->
+    <script src="{{ asset ('dashboard/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset ('dashboard/js/plugins-init/datatables.init.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 </body>
 </html>

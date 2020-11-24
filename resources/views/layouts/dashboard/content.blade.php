@@ -36,7 +36,7 @@
 
                             </span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">140</span></h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $menus }}</span></h3>
                                 <p class="mb-0">Total Menus</p>
                                 {{-- <small>4% (30 days)</small> --}}
                             </div>
@@ -72,7 +72,7 @@
                             <div class="media-body">
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">279</span></h3>
                                 <p class="mb-0">Total Orders</p>
-                                <small>4% (30 days)</small>
+                                {{-- <small>4% (30 days)</small> --}}
                             </div>
                         </div>
                     </div>

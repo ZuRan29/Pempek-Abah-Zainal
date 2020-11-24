@@ -15,8 +15,13 @@ class MenuController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $menus = Menu::all();
         return view('dashboard.menu.index', compact('menus'));
+=======
+        $data = Menu::all();
+        return view('dashboard.menu.index', compact('data'));
+>>>>>>> indonesia
     }
 
     /**
@@ -45,6 +50,7 @@ class MenuController extends Controller
         ]);
 
         $data = $request->all();
+<<<<<<< HEAD
         dd($data);
 
         $data['foto'] = $request->foto->getClientOriginalName();
@@ -66,6 +72,16 @@ class MenuController extends Controller
 
 
         // return redirect()->route('menu.index')->with('success', 'Menu Berhasil Ditambahkan');
+=======
+        
+        $data['foto'] = $request->foto->getClientOriginalName();
+        $request->foto->move(public_path('images/menu/'. $request->nama_menu), $data['foto']);
+
+        Menu::create($data);
+
+        return redirect()->route('menu.index')->with('success','Menu Baru Berhasil Ditambahkan !');
+
+>>>>>>> indonesia
     }
 
     /**

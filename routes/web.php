@@ -22,14 +22,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing Page
-Route::get('/', function () {
-    return view('layouts.landingpage.menu');
-});
+// Route::get('/', function () {
+//     return view('layouts.landingpage.menu');
+// });
+// Landing Page
+    Route::get('/', 'Landing\HomeController@index')->name('home');
 
 // Dashboard Admin
     Route::group(['middleware' => ['auth']], function () {
+
+        // Admin Dashboard
         Route::get('admin/dashboard', [DashboardController::class,'index'])->name('dashboard');
+
+        // User
+        Route::resource('admin/dashboard/users', 'Dashboard\Auth\UserController');
+
+        // Role
+        Route::resource('admin/dashboard/role', 'Dashboard\Auth\RoleController');
+
+        // Permission
+        Route::resource('admin/dashboard/permissions', 'Dashboard\Auth\PermissionController');
+
+        // Profile Dashboard
+        Route::get('admin/dashboard/profile', 'Dashboard\ProfileController@index')->name('dashboard.profile');
+
+        // Menu
         Route::resource('admin/dashboard/menu', 'Dashboard\MenuController');
+
+        // Images Landing
+        Route::resource('admin/dashboard/landing-images', 'Dashboard\ImagesLandingController');
+
     });
 
 // Merkury Chat
@@ -49,8 +71,11 @@ Route::get('/', function () {
         return view('whatsapp.chat-api');
     });
     Route::post('dashboard-blast/chat-api/send', [ChatApiControlller::class, 'index'])->name('chat-api.send');
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('dashboard-blast/chat-api/send/new', 'Broadcast\ChatApiControlller@getDatabase');
+    // Send File
+    Route::get('dashboard-blast/chat-api/send/file', 'Broadcast\ChatApiControlller@sendFile');
+    // Send File New
+    Route::get('dashboard-blast/chat-api/send/file-new', 'Broadcast\ChatApiControlller@sendFileNew');
 
 // Auth::routes();
     // Authentication Routes...
