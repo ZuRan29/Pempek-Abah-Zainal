@@ -38,7 +38,7 @@
                                                     <span class="input-group-text">Upload</span>
                                                 </div>
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input">
+                                                    <input type="foto" class="custom-file-input">
                                                     <label class="custom-file-label">Choose file</label>
                                                 </div>
                                             </div>

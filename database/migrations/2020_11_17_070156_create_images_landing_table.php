@@ -15,7 +15,6 @@ class CreateImagesLandingTable extends Migration
     {
         Schema::create('images_landing', function (Blueprint $table) {
             $table->id();
-            $table->string('path');
             $table->string('foto');
             $table->timestamps();
         });

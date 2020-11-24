@@ -35,7 +35,9 @@ class ImagesLandingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request[
+            'foto' => 'required|mimes:png,jpg,jpeg'
+        ]);
     }
 
     /**
