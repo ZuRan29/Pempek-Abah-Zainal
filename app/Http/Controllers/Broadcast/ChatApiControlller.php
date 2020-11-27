@@ -180,47 +180,54 @@ Harga Normal : ~Rp. 3.500.000~,
     public function sendFileNew()
 {
 
-        $broadcast = DB::table('bc_wa_3')->where('status', '0')->limit(250)->get();
+        $broadcast = DB::table('bc_wa_2')->where('status', '0')->limit(250)->get();
 
-        // dd($broadcast);
+        $kata = [
+            'Hallo', 'Yth', 'Salam', 'Halo Bapak/Ibu', 'Selamat Malam' , 'Salam Bapak/Ibu'
+        ];
 
         foreach ($broadcast as $broad) {
-            $coba = DB::table('bc_wa_3')->where('id', $broad->id)->update(['status' => '1']);
+            $coba = DB::table('bc_wa_2')->where('id', $broad->id)->update(['status' => '1']);
+            $sapa = array_rand($kata);
 
-            $message = 'Salam Bapak / Ibu '. $broad->nama .'
-Kelas Kompetensi – Full Online
-BIMBINGAN TEKNIS & SERTIFIKASI KOMPETENSI
-AHLI MUDA K3 KONSTRUKSI – BNSP
-(Peraturan Menteri PUPR No. 21 Tahun 2019 & Permen PUPR No 14 tahun 2020)
+            $message =  $kata[$sapa].',' .'
+Bimbingan Teknis Nasional - Online
+Pembekalan Teknis bagi Pejabat Pengadaan dalam Pelaksanaan Pengadaan Tahun Anggaran 2021
+(Dilengkapi e-Learning Materi Kompetensi Okupasi Pejabat Pengadaan dan Materi Jasa Konstruksi)
 
-Metode Pelatihan
-•  E- learning
-•  Tatap muka Online - Webinar
-•  Sertifikasi Komptensi BNSP – Online
+•  14 – 23 Desember 2020
+•  18. 30 – 21.00 WIB
+•  7 Sesi Pertemuan Online - ZOOM
 
-Tanggal Kegiatan : 14 – 19 Desember 2020
+Dasar Hukum Materi
+•  Peraturan Presiden No. 16 Tahun 2018
+•  Peraturan Menteri PUPR No. 14 Tahun 2020
+•  Perlem LKPP dan SE PUPR
+•  SKKNI Pengadaan
 
-Narasumber dari :
-•  Tim Ditjen Bina Konstruksi - Kementerian PUPR
-•  Praktisi dan Konsultan K3 Konstruksi
+Fasilitas
+•  7 Sesi kelas Online
+•  Materi, Modul, dan Perturan Terkait
+•  E- Learning Okupasi Pejabat Pengadaan (9 Materi)
+•  Rekaman Pembelajaran
+•  Grup Diskusi
+•  E – Sertifikat
 
-Promo Akhir Tahun  4.750.000,-
+Biaya Rp. 950.000,-
 
-Selengkapnya di  https://kelassmart.com/k3bnsp/
+Pendaftaran https://pejabatpengadaan.diklatonline.id/
 
-WA Panitia https://wa.me/628111565770
-
-Panitia  : 0811 1565 770 / 0811 9997 339';
+Panitia : 0811 1102 991 / 0811 8042 811';
 
             // $message = 'Halo';
         $data = [
-            'phone' => '62'. $broad->telp,
-            'body' => 'http://diklatonline.id/bc_wa/ahli_muda_k3.jpeg',
-            'filename' => 'ahli_muda_k3.jpeg',
+            'phone' => $broad->telp,
+            'body' => 'http://diklatonline.id/bc_wa/pejabat_pengadaan.jpg',
+            'filename' => 'pejabat_pengadaan.jpg',
             'caption' => $message
         ];
 
-        $url = 'https://eu114.chat-api.com/instance144661/sendFile?token=sdje75wgo6ci2f4w';
+        $url = 'https://eu82.chat-api.com/instance152196/sendFile?token=cna1cntl12uuuoly';
 
         $realData = json_encode($data);
 
