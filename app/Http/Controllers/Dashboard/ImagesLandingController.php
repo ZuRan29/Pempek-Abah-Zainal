@@ -15,7 +15,8 @@ class ImagesLandingController extends Controller
      */
     public function index()
     {
-        return view('dashboard.about-landing.images.index');
+        $data = ImagesLanding::all();
+        return view('dashboard.about-landing.images.index', compact('data'));
     }
 
     /**

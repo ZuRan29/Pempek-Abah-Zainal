@@ -22,9 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing Page
-// Route::get('/', function () {
-//     return view('layouts.landingpage.menu');
-// });
+
 // Landing Page
     Route::get('/', 'Landing\HomeController@index')->name('home');
 
